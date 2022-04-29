@@ -1,7 +1,5 @@
-# HaRT
 
-We are currently working HaRD to make HaRT very accessible! 
 
-Please click watch -------------------------------------------------->
-to be notified when HaRT will be available. 
+## We are currently working HaRD to make HaRT easily accessible! :)
+## Please click WATCH [second option on the top right corner] ... to be notified when HaRT becomes available! 
 
