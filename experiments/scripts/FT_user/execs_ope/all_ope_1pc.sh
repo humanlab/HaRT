@@ -1,0 +1,2 @@
+/home/nisoni/Fourth_expmts_hulm/HULM_AR/experiments/scripts/FT_user/FT_ope/last_pred_token/scoped_1pc.sh $@ /home/nisoni/Fourth_expmts_hulm/HULM_AR/experiments/outputs_pre_early_stopping/WithoutOptuna/dgxCuda_trials/dev/oosmsgs/2WithReasonableInitialHistory/run-0/checkpoint-399
+/home/nisoni/Fourth_expmts_hulm/HULM_AR/experiments/scripts/FT_user/FT_ope/use_history_output/scoped_1pc.sh $@ /home/nisoni/Fourth_expmts_hulm/HULM_AR/experiments/outputs_pre_early_stopping/WithoutOptuna/dgxCuda_trials/dev/oosmsgs/2WithReasonableInitialHistory/run-0/checkpoint-399

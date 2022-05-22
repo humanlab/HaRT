@@ -1,0 +1,2 @@
+# /home/nisoni/Second_expmts_hulm/HULM_AR/experiments/scripts/FT_sentiment/gpt2_w_ctxt_PT_seed12.sh $@ /home/nisoni/Fourth_expmts_hulm/HULM_AR/experiments/outputs_pre_early_stopping/WithoutOptuna/dgxCuda_trials_10pc/dev/oosmsgs/0WithoutHistory_10pc/run-2/checkpoint-9400 
+/home/nisoni/Second_expmts_hulm/HULM_AR/experiments/scripts/FT_sentiment/gpt2_w_ctxt_PT_seed50.sh $@ /home/nisoni/Fourth_expmts_hulm/HULM_AR/experiments/outputs_pre_early_stopping/WithoutOptuna/dgxCuda_trials_10pc/dev/oosmsgs/0WithoutHistory_10pc/run-2/checkpoint-9400

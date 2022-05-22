@@ -1,0 +1,9 @@
+--find-links https://download.pytorch.org/whl/torch_stable.html
+torch==1.9.1+cu111
+transformers==4.5.1
+pandas==1.1.4
+more_itertools
+sklearn
+optuna
+mysqlclient
+SQLAlchemy
