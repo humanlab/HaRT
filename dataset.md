@@ -1,4 +1,4 @@
-# Datasets made available on our [website](https://nikita-soni-nlp.netlify.app/) and on [github](data/datasets).
+# Datasets made available on our [website](https://nikita-soni-nlp.netlify.app/dataset) and on [github](data/datasets).
 
 Note: Twitter dataset is a subset of the County Tweet Lexical Bank [Giorgi et al., 2018](https://aclanthology.org/D18-1148/) appended with 
 newer 2019 and 2020 tweets, in total spanning 2009 through 2020.
