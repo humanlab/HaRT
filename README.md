@@ -1,4 +1,4 @@
-# HaRT: Human-aware Recurrent Transformer <br/> [<img src=https://img.shields.io/badge/Download%20Model-green>](https://drive.google.com/file/d/1MGJN1Fp21Q7lPbICNx2_D5qZg8gG0Qla/view?usp=sharing) [<img src=https://img.shields.io/badge/Datasets-yellow>](dataset.md) [<img src=https://img.shields.io/badge/Read%20Paper-blue>](https://arxiv.org/pdf/2205.05128.pdf) [<img src=https://img.shields.io/badge/Website-purple>](https://nikita-soni-nlp.netlify.app/)
+# HaRT: Human-aware Recurrent Transformer <br/> [<img src=https://img.shields.io/badge/Download%20Model-green>](https://drive.google.com/file/d/1MGJN1Fp21Q7lPbICNx2_D5qZg8gG0Qla/view?usp=sharing) [<img src=https://img.shields.io/badge/Datasets-yellow>](dataset.md) [<img src=https://img.shields.io/badge/Read%20Paper-blue>](https://aclanthology.org/2022.findings-acl.52.pdf) [<img src=https://img.shields.io/badge/Website-purple>](https://nikita-soni-nlp.netlify.app/)
 
 
 This repository contains the code-base for HaRT, a solution for Human Language Modeling (HuLM).  <br/>
