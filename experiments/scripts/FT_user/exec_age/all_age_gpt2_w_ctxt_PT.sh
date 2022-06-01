@@ -1,2 +1,0 @@
-/home/nisoni/Fourth_expmts_hulm/HULM_AR/experiments/scripts/FT_user/FT_age/last_pred_token/gpt2_w_ctxt_PT.sh $@ /home/nisoni/Fourth_expmts_hulm/HULM_AR/experiments/outputs_pre_early_stopping/WithoutOptuna/dgxCuda_trials_10pc/dev/oosmsgs/0WithoutHistory_10pc/run-2/checkpoint-9400
-/home/nisoni/Fourth_expmts_hulm/HULM_AR/experiments/scripts/FT_user/FT_age/use_history_output/gpt2_w_ctxt_PT.sh $@ /home/nisoni/Fourth_expmts_hulm/HULM_AR/experiments/outputs_pre_early_stopping/WithoutOptuna/dgxCuda_trials_10pc/dev/oosmsgs/0WithoutHistory_10pc/run-2/checkpoint-9400

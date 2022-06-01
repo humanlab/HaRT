@@ -1,7 +1,0 @@
-HULM_AR/experiments/scripts/FT_sentiment_trials/scopedseed12.sh $@ /home/nisoni/Fourth_expmts_hulm/HULM_AR/experiments/outputs_pre_early_stopping/WithoutOptuna/dgxCuda_trials_10pc/dev/oosmsgs/WithReasonableHistory_5e4_5e6_7epochs/run-0/checkpoint-9400
-HULM_AR/experiments/scripts/FT_sentiment_trials/scopedseed50.sh $@ /home/nisoni/Fourth_expmts_hulm/HULM_AR/experiments/outputs_pre_early_stopping/WithoutOptuna/dgxCuda_trials_10pc/dev/oosmsgs/WithReasonableHistory_5e4_5e6_7epochs/run-0/checkpoint-9400
-HULM_AR/experiments/scripts/FT_sentiment_trials/scopedseed32.sh $@ /home/nisoni/Fourth_expmts_hulm/HULM_AR/experiments/outputs_pre_early_stopping/WithoutOptuna/dgxCuda_trials_10pc/dev/oosmsgs/WithReasonableHistory_5e4_5e6_7epochs/run-0/checkpoint-9400
-
-HULM_AR/experiments/scripts/FT_sentiment_trials/gpt2_w_ctxt_PT_seed12.sh $@ /home/nisoni/Fourth_expmts_hulm/HULM_AR/experiments/outputs_pre_early_stopping/WithoutOptuna/dgxCuda_trials_10pc/dev/oosmsgs/0WithoutHistory_10pc/run-2/checkpoint-9400
-# HULM_AR/experiments/scripts/FT_sentiment_trials/gpt2_w_ctxt_PT_seed50.sh $@ /home/nisoni/Fourth_expmts_hulm/HULM_AR/experiments/outputs_pre_early_stopping/WithoutOptuna/dgxCuda_trials_10pc/dev/oosmsgs/0WithoutHistory_10pc/run-2/checkpoint-9400
-# HULM_AR/experiments/scripts/FT_sentiment_trials/gpt2_w_ctxt_PT_seed32.sh $@ /home/nisoni/Fourth_expmts_hulm/HULM_AR/experiments/outputs_pre_early_stopping/WithoutOptuna/dgxCuda_trials_10pc/dev/oosmsgs/0WithoutHistory_10pc/run-2/checkpoint-9400
