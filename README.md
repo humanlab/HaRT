@@ -2,7 +2,7 @@
 
 
 This repository contains the code-base for HaRT, a solution for Human Language Modeling (HuLM).  <br/>
-You can read more about the HuLM task and the HaRT model in our paper [Human Language Modeling](https://arxiv.org/pdf/2205.05128.pdf). <br/>
+You can read more about the HuLM task and the HaRT model in our paper [Human Language Modeling](https://aclanthology.org/2022.findings-acl.52/) on ACL anthology or on [arXiv](https://arxiv.org/pdf/2205.05128.pdf). <br/>
 We have also released the [datasets](dataset.md) used for the released version of HaRT model. <br/>
 You can also check out our [website](https://nikita-soni-nlp.netlify.app/) for more details.<br/>
 Code in this repository is built upon [HuggingFace's codebase](https://github.com/huggingface/transformers).
