@@ -8,6 +8,11 @@ user_id_column = 'user_id'
 message_column = 'message'
 order_by_fields = [user_id_column, 'updated_time']
 
+def get_fields():
+    return {
+            'order_by_fields': order_by_fields
+    }
+
 def get_conn(data_args):
     myDB = URL(drivername='mysql', host=data_args.hostname,
                 database=data_args.db, query={'read_default_file': '~/.my.cnf', 'charset': 'utf8mb4'})
@@ -68,17 +73,17 @@ def get_data_from_db(logger, table, data_args, data_type):
     conn.close()
     return data
 
-def get_data_from_csv(logger, csv_file, data_type):
+def get_data_from_csv(logger, csv_file, fields, data_type):
     logger.info("Getting data from {} data pickle file:{}".format(data_type, csv_file))
     data = pd.read_csv(csv_file)
-    data.sort_values(by=[', '.join(order_by_fields)], inplace=True)
+    data.sort_values(by=fields['order_by_fields'], inplace=True)
     data.reset_index(drop=True, inplace=True)
     return data
 
-def get_data_from_pkl(logger, pkl_file, data_type):
+def get_data_from_pkl(logger, pkl_file, fields, data_type):
     logger.info("Getting data from {} data pickle file:{}".format(data_type, pkl_file))
     data = pd.read_pickle(pkl_file)
-    data.sort_values(by=[', '.join(order_by_fields)], inplace=True)
+    data.sort_values(by=fields['order_by_fields'], inplace=True)
     data.reset_index(drop=True, inplace=True)
     return data
 
@@ -141,10 +146,11 @@ def group_data(data, max_blocks, logger):
     return batch.to_numpy().tolist(), actual_blocks
 
 def load_dataset(logger, tokenizer, table, block_size, max_blocks, data_args, data_type, disable_hulm_batching):
+    fields = get_fields(data_args)
     if 'pkl' in table:
-        data = get_data_from_pkl(logger, table, data_type)
+        data = get_data_from_pkl(logger, table, fields, data_type)
     elif 'csv' in table:
-        data = get_data_from_csv(logger, table, data_type)
+        data = get_data_from_csv(logger, table, fields, data_type)
     else:
         data = get_data_from_db(logger, table, data_args, data_type)
     data = transform_data(logger, tokenizer, data, block_size)

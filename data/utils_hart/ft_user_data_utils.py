@@ -9,6 +9,18 @@ message_column = 'message'
 order_by_fields = [user_id_column, 'updated_time']
 label_column = 'label'
 
+def get_fields(data_args):
+    if data_args.task_name is not None:
+        return {
+                'order_by_fields': [user_id_column, 'message_id'],
+                'label_field': data_args.task_name
+        }
+    else:
+        return {
+            'order_by_fields': order_by_fields,
+            'label_field': label_column
+        }
+
 def get_conn(data_args):
     myDB = URL(drivername='mysql', host=data_args.hostname,
                 database=data_args.db, query={'read_default_file': '~/.my.cnf', 'charset': 'utf8mb4'})
@@ -115,20 +127,20 @@ def get_labels(conn, data_type, data_table, label_field):
     
     return labels
 
-def get_data_from_csv(logger, csv_file, data_type):
+def get_data_from_csv(logger, csv_file, fields, data_type):
     logger.info("Getting data from {} data pickle file:{}".format(data_type, csv_file))
     data = pd.read_csv(csv_file)
-    data.sort_values(by=[', '.join(order_by_fields)], inplace=True)
+    data.sort_values(by=fields['order_by_fields'], inplace=True)
     data.reset_index(drop=True, inplace=True)
     data_new = data[[user_id_column, message_column]].copy()
     labels = data[[user_id_column, label_column]].copy()
     labels.drop_duplicates(inplace=True)
     return data_new, labels
 
-def get_data_from_pkl(logger, pkl_file, data_type):
+def get_data_from_pkl(logger, pkl_file, fields, data_type):
     logger.info("Getting data from {} data pickle file:{}".format(data_type, csv_file))
     data = pd.read_pickle(pkl_file)
-    data.sort_values(by=[', '.join(order_by_fields)], inplace=True)
+    data.sort_values(by=fields['order_by_fields'], inplace=True)
     data.reset_index(drop=True, inplace=True)
     data_new = data[[user_id_column, message_column]].copy()
     labels = data[[user_id_column, label_column]].copy()
@@ -203,10 +215,11 @@ def group_data(data, max_blocks, logger):
 def load_dataset(logger, tokenizer, table, block_size, max_blocks, data_args, data_type, disable_hulm_batching):
     label_field = data_args.task_name
     data_type = 'test_qlength' if data_args.task_name == 'ope' else data_type
+    fields = get_fields(data_args)
     if 'pkl' in table:
-        data, labels = get_data_from_pkl(logger, table, data_type)
+        data, labels = get_data_from_pkl(logger, table, fields, data_type)
     elif 'csv' in table:
-        data, labels = get_data_from_csv(logger, table, data_type)
+        data, labels = get_data_from_csv(logger, table, fields, data_type)
     else:
         data, labels = get_data_from_db(logger, table, label_field, data_args, data_type)
     data = transform_data(logger, tokenizer, data, block_size)
