@@ -146,7 +146,7 @@ def group_data(data, max_blocks, logger):
     return batch.to_numpy().tolist(), actual_blocks
 
 def load_dataset(logger, tokenizer, table, block_size, max_blocks, data_args, data_type, disable_hulm_batching):
-    fields = get_fields(data_args)
+    fields = get_fields()
     if 'pkl' in table:
         data = get_data_from_pkl(logger, table, fields, data_type)
     elif 'csv' in table:
