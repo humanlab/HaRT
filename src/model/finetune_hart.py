@@ -135,7 +135,7 @@ class HaRTForSequenceClassification(HaRTBasePreTrainedModel):
             if self.finetuning_task=='ope' or self.finetuning_task=='user' or self.freeze_model:
                 logits = self.score(hidden_states) 
             elif self.finetuning_task=='age':
-                self.score(self.transform(self.ln_f(hidden_states)))
+                logits = self.score(self.transform(self.ln_f(hidden_states)))
             else:
                 logits = self.score(self.ln_f(hidden_states))
             pooled_logits = logits if (user_ids is None or self.use_history_output) else \
