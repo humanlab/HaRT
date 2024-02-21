@@ -118,6 +118,7 @@ def tokenize_with_labels(data, label_field, tokenizer, data_args):
     data['tokenized'] = data.apply(process, axis=1)
 
 def normalize_and_concat(data):
+    data['tokenized'] = data['tokenized'].apply(lambda x: x.data)
     normalized = pd.json_normalize(data['tokenized'])
     data = pd.concat([data, normalized], axis=1)
     return data.groupby(user_id_column).agg({'input_ids': 'sum', 'attention_mask':'sum', 'labels':'sum'}).reset_index()
