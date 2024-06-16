@@ -2,7 +2,7 @@ torch
 transformers
 pandas
 more_itertools
-sklearn
+scikit-learn
 #optuna
 #mysqlclient
 #SQLAlchemy
