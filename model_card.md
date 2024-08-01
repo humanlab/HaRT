@@ -40,6 +40,7 @@ The primary intended users of the model are _AI and Psychology researchers and p
 ### Out-of-scope use cases
 
 At this point, our model is not intended to be used in practice for mental health care nor labeling of individuals publicly with personality or age scores.
+Additionally, the current publicly available version of the model is not intended to be used for generation yet.
 
 ## Factors
 PEW statistics on Twitter users (skews young; everything else is fairly representative): <br/>
