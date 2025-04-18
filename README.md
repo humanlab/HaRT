@@ -7,6 +7,17 @@ We have also released the [datasets](dataset.md) used for the released version o
 You can also check out our [website](https://nikita-soni-nlp.netlify.app/) for more details.<br/>
 Code in this repository is built upon [HuggingFace's codebase](https://github.com/huggingface/transformers).
 
+# Cite 
+
+```
+@inproceedings{soni2022human,
+  title={Human Language Modeling},
+  author={Soni, Nikita and Matero, Matthew and Balasubramanian, Niranjan and Schwartz, H Andrew},
+  booktitle={Findings of the Association for Computational Linguistics: ACL 2022},
+  pages={622--636},
+  year={2022}
+}
+```
 
 
 # Setup
